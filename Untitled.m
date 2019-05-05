@@ -1,0 +1,12 @@
+B=imread('A.png');
+BW = im2bw(B, 0.5);
+BW3 = bwmorph(BW,'remove',Inf);
+A=imresize(BW3,1);
+a=224;
+b=204;
+temp=zeros(2,3);
+[B1 ,B2]=Neighbours(A,a,b,temp) ;
+C1= B1==1;
+C2=B2(C1);
+D=size(C2);
+E=D(1,2);

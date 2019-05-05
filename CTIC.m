@@ -1,0 +1,137 @@
+function [ Image ] = CTIC( B )%Code to image converter
+%UNTITLED2 Summary of this function goes here
+%   Detailed explanation goes here
+T=zeros(500,500);
+a=224;b=204;
+h=a;k=b;i=1;
+
+while(i<length(B))
+X=B(1,i);
+
+if(X==1)
+    T(h,k)=1;T(h-1,k-1)=1;T(h-2,k-2)=1;
+    h=h-1;k=k-1;
+elseif(X==2)
+    T(h,k)=1;T(h-1,k-1)=1;T(h-2,k-1)=1;
+    h=h-1;k=k-1;
+elseif(X==3)
+    T(h,k)=1;T(h-1,k-1)=1;T(h-2,k)=1;
+     h=h-1;k=k-1;
+elseif(X==4)
+    T(h,k)=1;T(h-1,k-1)=1;T(h-1,k-2)=1;
+    h=h-1;k=k-1;
+elseif(X==5)
+    T(h,k)=1;T(h-1,k-1)=1;T(h,k-2)=1;
+     h=h-1;k=k-1;
+elseif(X==6)
+    T(h,k)=1;T(h-1,k)=1;T(h-2,k-1)=1;
+    h=h-1;k=k;
+elseif(X==7)
+    T(h,k)=1;T(h-1,k)=1;T(h-2,k)=1;
+    h=h-1;k=k;
+elseif(X==8)
+    T(h,k)=1;T(h-1,k)=1;T(h-2,k+1)=1;
+    h=h-1;k=k;
+elseif(X==9)
+    T(h,k)=1;T(h-1,k)=1;T(h-1,k-1)=1;
+    h=h-1;k=k;
+elseif(X==10)
+    T(h,k)=1;T(h-1,k)=1;T(h,k+1)=1;
+    h=h-1;k=k;
+elseif(X==11)
+    T(h,k)=1;T(h-1,k+1)=1;T(h-2,k)=1;
+    h=h-1;k=k+1;
+elseif(X==12)
+    T(h,k)=1;T(h-1,k+1)=1;T(h-2,k+1)=1;
+    h=h-1;k=k+1;
+elseif(X==13)
+    T(h,k)=1;T(h-1,k+1)=1;T(h-2,k+2)=1;
+    h=h-1;k=k+1;
+elseif(X==14)
+    T(h,k)=1;T(h-1,k+1)=1;T(h-1,k+2)=1;
+    h=h-1;k=k+1;
+elseif(X==15)
+    T(h,k)=1;T(h-1,k+1)=1;T(h,k+2)=1;
+    h=h-1;k=k+1;
+elseif(X==16)
+    T(h,k)=1;T(h,k-1)=1;T(h-1,k-2)=1;
+    h=h;k=k-1;
+elseif(X==17)
+    T(h,k)=1;T(h,k-1)=1;T(h-1,k-1)=1;
+    h=h;k=k-1;
+elseif(X==18)
+    T(h,k)=1;T(h,k-1)=1;T(h,k-2)=1;
+    h=h;k=k-1;
+elseif(X==19)
+    T(h,k)=1;T(h,k-1)=1;T(h+1,k-2)=1;
+    h=h;k=k-1;
+elseif(X==20)
+    T(h,k)=1;T(h,k-1)=1;T(h+1,k-1)=1;
+    h=h;k=k-1;
+elseif(X==21)
+    T(h,k)=1;T(h,k+1)=1;T(h-1,k+1)=1;
+    h=h;k=k+1;
+elseif(X==22)
+    T(h,k)=1;T(h,k+1)=1;T(h-1,k+2)=1;
+    h=h;k=k+1;
+elseif(X==23)
+    T(h,k)=1;T(h,k+1)=1;T(h,k+2)=1;
+    h=h;k=k+1;
+elseif(X==24)
+    T(h,k)=1;T(h,k+1)=1;T(h+1,k+1)=1;
+    h=h;k=k+1;
+elseif(X==25)
+    T(h,k)=1;T(h,k+1)=1;T(h+1,k+2)=1;
+    h=h;k=k+1;
+elseif(X==26)
+    T(h,k)=1;T(h+1,k-1)=1;T(h,k-2)=1;
+    h=h+1;k=k-1;
+elseif(X==27)
+    T(h,k)=1;T(h+1,k-1)=1;T(h+1,k-2)=1;
+    h=h+1;k=k-1;
+elseif(X==28)
+    T(h,k)=1;T(h+1,k-1)=1;T(h+2,k-2)=1;
+    h=h+1;k=k-1;
+elseif(X==29)
+    T(h,k)=1;T(h+1,k-1)=1;T(h+2,k-1)=1;
+    h=h+1;k=k-1;
+elseif(X==30)
+    T(h,k)=1;T(h+1,k-1)=1;T(h+2,k)=1;
+    h=h+1;k=k-1;
+elseif(X==31)
+    T(h,k)=1;T(h+1,k)=1;T(h+1,k-1)=1;
+    h=h+1;k=k;
+elseif(X==32)
+    T(h,k)=1;T(h+1,k)=1;T(h+1,k+1)=1;
+    h=h+1;k=k;
+elseif(X==33)
+    T(h,k)=1;T(h+1,k)=1;T(h+2,k-1)=1;
+    h=h+1;k=k;
+elseif(X==34)
+    T(h,k)=1;T(h+1,k)=1;T(h+2,k)=1;
+    h=h+1;k=k;
+elseif(X==35)
+    T(h,k)=1;T(h+1,k)=1;T(h+2,k+1)=1;
+    h=h+1;k=k;
+elseif(X==36)
+    T(h,k)=1;T(h+1,k+1)=1;T(h,k+2)=1;
+    h=h+1;k=k+1;
+elseif(X==37)
+    T(h,k)=1;T(h+1,k+1)=1;T(h+1,k+2)=1;
+    h=h+1;k=k+1;
+elseif(X==38)
+    T(h,k)=1;T(h+1,k+1)=1;T(h+2,k)=1;
+    h=h+1;k=k+1;
+elseif(X==39)
+    T(h,k)=1;T(h+1,k+1)=1;T(h+2,k+1)=1;
+    h=h+1;k=k+1;
+elseif(X==40)
+    T(h,k)=1;T(h+1,k+1)=1;T(h+2,k+2)=1;
+    h=h+1;k=k+1;
+    
+
+end
+i=i+1;
+end
+Image=T;
+end

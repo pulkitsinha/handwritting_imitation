@@ -1,0 +1,10 @@
+B=imread('A.png');
+BW = im2bw(B, 0.5);
+BW3 = bwmorph(BW,'remove',Inf);
+A=imresize(BW3,1);
+a=224;
+b=204;
+imshow(A);
+T = Check2(A,a,b);
+WWW=CTIC(T);
+imshow(WWW);
